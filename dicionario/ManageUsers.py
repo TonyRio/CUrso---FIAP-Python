@@ -8,3 +8,4 @@ while opcao=="I" or opcao=="P" or opcao=="E" or opcao=="L":
         inserir(usuarios)
 
     opcao = perguntar()
+    # varicaoes
