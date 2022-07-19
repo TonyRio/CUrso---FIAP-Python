@@ -1,5 +1,5 @@
-
 from Manipulacao_de_Arquivos.funcoes.funcoes import *
+
 usuarios={}
 opcao = perguntar()
 
