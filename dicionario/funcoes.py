@@ -65,8 +65,7 @@ def salvar(dicionario):
 
 def excluir(dicionario):
     usuario =input("\nDigite o Nome do usuário que será excluido: ")
-    for elemento, nome in dicionario:
-        if elemento[nome]==dicionario:
+    for elemento in dicionario:
+        if elemento[1]==dicionario:
             dicionario.remove(elemento)
-        print("** usuario excluido **")
-        return "Itens excluídos."
+            return "Itens excluídos."
