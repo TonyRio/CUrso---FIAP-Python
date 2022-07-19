@@ -44,3 +44,22 @@ def resumirValores(lista):
         if len(valores)>0:print("O equipamento mais caro custa: ", max(valores))
         print("O equipamento mais barato custa: ", min(valores))
         print("O total de equipamentos é de: ", sum(valores))
+
+def perguntar():
+    return input("O que deseja realizar ? \n" +
+                 "<I> - Para inserir um usuario\n"+
+                 "<P> - Para pesquisar um usuario\n"+
+                 "<E> - Para excluir um usuario\n"+
+                 "<L> - Para Listar um usuario: ").upper()
+
+def inserir(dicionario):
+    dicionario[input("Digite o Login: ").upper()] = [input("Digite o nome: ").upper(),
+                                                     input("Digite a Ultima data de acesso : "),
+                                                     input("qual a ultima estacao acessada : ").upper()]
+    salvar(dicionario)
+
+def salvar(dicionario):
+    with open("bd.txt", "a") as arquivo:
+        for chave, valor in dicionario.items():
+            arquivo.write(chave+ ":" + valor)
+
