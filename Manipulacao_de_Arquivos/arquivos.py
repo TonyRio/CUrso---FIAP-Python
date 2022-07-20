@@ -6,3 +6,5 @@ with open("iris.data", "r") as arquivo:
 print(basedados)
 
 print(float(basedados[0] [0]) + float(basedados [0] [1]) )
+
+#manipulando itens
