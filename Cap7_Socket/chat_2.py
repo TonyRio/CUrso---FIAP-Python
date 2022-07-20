@@ -1,7 +1,7 @@
 from socket import *
 
 servidor="127.0.0.1"
-porta=43210
+porta=43212
 
 while True:
     obj_socket = socket(AF_INET, SOCK_STREAM)
