@@ -1,6 +1,6 @@
 from socket import *
 servidor= "127.0.0.1"
-porta=43212
+porta=43213
 
 obj_socket = socket(AF_INET, SOCK_STREAM)
 obj_socket.bind((servidor,porta))
@@ -15,5 +15,6 @@ while True:
         print("Recebemos: ", str(msg_recebida)[2:-1])
         msg_enviada = bytes(input("Sua resposta: "), 'utf-8')
         con.send(msg_enviada)
-        break
+        if str(msg_enviada)[2:1].upper() == "FIM":
+            break
     con.close()

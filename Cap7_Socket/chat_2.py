@@ -1,7 +1,7 @@
 from socket import *
 
 servidor="127.0.0.1"
-porta=43212
+porta=43213
 
 while True:
     obj_socket = socket(AF_INET, SOCK_STREAM)
@@ -10,4 +10,6 @@ while True:
     obj_socket.send(msg)
     resposta=obj_socket.recv(1024)
     print("Resposta do Servidor: ", str(resposta)[2:-1])
+    if str(msg)[2:1].upper()=="FIM":
+        break
 obj_socket.close()
