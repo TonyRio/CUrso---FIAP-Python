@@ -1,3 +1,6 @@
+from datetime import date,datetime
+
+
 def perguntar():
     resposta = input("O que deseja realizar?"
 +
@@ -12,7 +15,8 @@ def perguntar():
 
 def inserir(dicionario):
     dicionario[input("Digite o login: ").upper()] = [input("Digite o nome: ").upper(),
-                                          input("Digite a última data de acesso: "),
+                                                     (datetime.now().date()),
+                                          # input("Digite a última data de acesso: "),
                                           input("Qual a última estação acessada: ").upper()]
 
 def pesquisar(dicionario, chave):
@@ -31,4 +35,5 @@ def listar(dicionario):
     for chave, valor in dicionario.items():
         print("Objeto......")
         print("Login: ", chave)
-        print("Dados: ", valor)
+        print("Dados - : ", valor)
+        print(datetime.now().date())
